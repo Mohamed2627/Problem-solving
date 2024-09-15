@@ -7,11 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="displayDate()">The time is?</button>
-
-    <p id="demo"></p>
-
-    <!-- <script src="./quikTopics.js"></script> -->
-    <script src="./array_sum_two_numbers.js"></script>
+  <button onclick="displayDate()">The time is?</button>
+  <p id="date"></p>
+  <p id="demo"></p>
+  <script>
+    function displayDate () {
+      const date = new Date().toLocaleDateString()
+      const time = new Date().toLocaleTimeString()
+      const pTag = document.getElementById('date');
+      pTag.innerText = `${date} :: ${time}`
+    }
+  </script>
+  <script src="./_2666oneFunctionCall.js"></script>
 </body>
 </html>
